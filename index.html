@@ -58,7 +58,10 @@ nav a.buy{opacity:1}
 .hint b{width:1px;height:34px;background:currentColor;display:block;animation:drop 1.8s ease-in-out infinite;transform-origin:top}
 @keyframes drop{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(0);transform-origin:bottom}}
 @media (max-width:820px){
-  nav{gap:18px}
+  nav{gap:14px}
+  nav a,nav button.link{font-size:13px;white-space:nowrap}
+  nav .buy{padding:8px 14px}
+  .mark svg{width:32px;height:32px}
   header{padding-block:16px}
   .words span{font-size:clamp(64px,21vw,200px)}
 }
@@ -72,6 +75,7 @@ nav a.buy{opacity:1}
   <nav aria-label="Main">
     <button type="button" class="link" id="openAbout" aria-haspopup="dialog">about us</button>
     <button type="button" class="link" id="openCourses" aria-haspopup="dialog">courses</button>
+    <a href="https://www.instagram.com/peak.roasters/" target="_blank" rel="noopener">instagram</a>
     <a class="buy" href="https://baristasolutions.org/en-bh/categories/1091568/%D8%AD%D8%A8%D9%88%D8%A8-%D8%A7%D9%84%D8%A8%D9%86" target="_blank" rel="noopener">shop</a>
   </nav>
 </header>
