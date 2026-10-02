@@ -340,7 +340,7 @@ const dotsEl=document.getElementById('dots');
 const dots=STOPS.map((_,i)=>{const b=document.createElement('button');b.type='button';b.setAttribute('aria-label',NAMES[i]);b.addEventListener('click',()=>go(i));dotsEl.appendChild(b);return b;});
 function markDots(){dots.forEach((b,i)=>b.setAttribute('aria-current',i===idx?'true':'false'));}markDots();
 function go(i){i=Math.max(0,Math.min(STOPS.length-1,i));if(i===idx&&!tw)return;const from=prog,to=STOPS[i];
- const dur=(reduce?.35:1.0+Math.abs(to-from)*3.2)*1000;tw={from,to,t0:performance.now(),dur};idx=i;markDots();}
+ const dur=(reduce?.35:2.4+Math.abs(to-from)*4.5)*1000;tw={from,to,t0:performance.now(),dur};idx=i;markDots();}
 const busy=()=>tw&&performance.now()-tw.t0<tw.dur*.8;
 let wheelAcc=0,wheelT=0;
 const aboutEl=document.getElementById('about'),openA=document.getElementById('openAbout');
